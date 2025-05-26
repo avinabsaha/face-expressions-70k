@@ -6,6 +6,7 @@ Useful Links : [Paper (PDF)](https://github.com/avinabsaha/face-expressions-70k/
 
 ## Dataset Download
 
+The face images can be downloaded from [Google Drive](https://drive.google.com/drive/folders/1_nUHejXuT1_holhD8aL_LOvea2ZQ5-nB?usp=sharing). The metadata is available at [metadata.csv](metadata.csv).
 
 
 ## Citation
