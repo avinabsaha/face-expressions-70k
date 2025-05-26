@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FaceExpressions-70k</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://rsms.me/inter/inter.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <style>
+    :root {
+      --accent: #000;
+      --text: #1a1a1a;
+      --muted: #555;
+      --blue: #1a56db;
+      --background: #fafafa;
+    }
+
+    html {
+      font-family: 'Inter var', sans-serif;
+      font-size: 17px;
+      background-color: var(--background);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-feature-settings: "liga" 1, "kern" 1;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-weight: 400;
+    }
+
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 60px 20px 40px;
+      text-align: center;
+    }
+
+    .title {
+      font-size: 38px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+
+    .siggraph-note {
+      font-style: italic;
+      font-weight: 500;
+      margin: 12px 0 28px;
+      color: #444;
+      font-size: 16px;
+    }
+
+    .siggraph-note a {
+      color: red;
+      text-decoration: none;
+      font-style: italic;
+    }
+
+    .authors {
+      font-size: 22.5px;
+      margin-bottom: 10px;
+      line-height: 1.8;
+    }
+
+    .author .name {
+      color: var(--blue);
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .author .name:hover {
+      text-decoration: underline;
+    }
+
+    .affiliations {
+      font-size: 18.2px;
+      color: #444;
+      margin-bottom: 35px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .affiliations div {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .affiliations img.ut {
+      height: 32px;
+      margin-bottom: -2px;
+    }
+
+    .affiliations img.meta {
+      height: 24px;
+    }
+
+    .links a {
+      display: inline-block;
+      margin: 10px 12px;
+      padding: 10px 20px;
+      background-color: #000;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 500;
+      font-size: 15px;
+      transition: background 0.2s ease;
+    }
+
+    .links a:hover {
+      background-color: #333;
+    }
+
+    .section {
+      margin-top: 60px;
+    }
+
+    .section h2 {
+      font-size: 20px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .section p {
+      margin: 0 auto;
+      max-width: 800px;
+      padding: 0 10px;
+      text-align: justify;
+      font-size: 16px;
+      color: var(--muted);
+    }
+
+    .teaser {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .teaser figure {
+      margin: 0 auto;
+      max-width: 800px;
+    }
+
+    .teaser img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .teaser figcaption {
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: 8px;
+      font-style: italic;
+      text-align: justify;
+      line-height: 1.5;
+    }
+
+    pre {
+      background: #f4f4f4;
+      padding: 18px;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-size: 14px;
+      margin: 0 auto;
+      max-width: 800px;
+      text-align: left;
+    }
+
+    .copy-button {
+      display: block;
+      margin: 12px auto 0;
+      padding: 8px 16px;
+      background-color: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .copy-button:hover {
+      background-color: #333;
+    }
+
+    #citation p {
+      max-width: 800px;
+      text-align: left;
+      margin: 0 auto 15px;
+      padding: 0 10px;
+      font-size: 16px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 600px) {
+      .title { font-size: 30px; }
+      .authors { font-size: 18px; }
+      .affiliations { flex-direction: column; gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="title">FaceExpressions-70k: A Dataset of Perceived Expression Differences</div>
+
+    <p class="siggraph-note">
+      Accepted at <a href="https://s2025.siggraph.org" target="_blank">ACM SIGGRAPH 2025</a>
+    </p>
+
+    <div class="authors">
+      <span class="author"><a class="name" href="https://avinabsaha.github.io/" target="_blank">Avinab Saha</a><sup>1</sup>,</span>
+      <span class="author"><a class="name" href="https://sites.google.com/view/berriechen" target="_blank">Yu-Chih Chen</a><sup>1</sup>,</span>
+      <span class="author"><a class="name" href="https://scholar.google.com/citations?user=XPZLx-8AAAAJ&hl=en" target="_blank">Jean-Charles Bazin</a><sup>2</sup>,</span>
+      <span class="author"><a class="name" href="https://www.linkedin.com/in/christian-h%C3%A4ne-32957370/" target="_blank">Christian Häne</a><sup>2</sup>,</span>
+      <span class="author"><a class="name" href="https://www.linkedin.com/in/ioannis-katsavounidis-a736503/" target="_blank">Ioannis Katsavounidis</a><sup>2</sup>,</span>
+      <span class="author"><a class="name" href="https://achapiro.github.io/" target="_blank">Alexandre Chapiro</a><sup>2</sup>,</span>
+      <span class="author"><a class="name" href="https://www.ece.utexas.edu/people/faculty/alan-bovik" target="_blank">Alan C. Bovik</a><sup>1</sup></span>
+    </div>
+
+    <div class="affiliations">
+      <div><sup>1</sup> The University of Texas at Austin <img src="ut_logo.png" alt="UT Austin Logo" class="ut"></div>
+      <div><sup>2</sup> Reality Labs, Meta <img src="meta_logo.png" alt="Meta Logo" class="meta"></div>
+    </div>
+
+    <div class="links">
+      <a href="paper.pdf">Paper (PDF)</a>
+      <a href="https://camps.aptaracorp.com/ACM_PMS/PMS/ACM/SIGGRAPHCONFERENCEPAPERS25/64/1c2393e6-1a26-11f0-ada9-16bb50361d1f/OUT/siggraphconferencepapers25-64.html" target="_blank">Paper (HTML)</a>
+      <a href="https://github.com/avinabsaha/face-expressions-70k" target="_blank">Dataset</a>
+      <a href="https://www.youtube.com/watch?v=PSSDaqYTyKY" target="_blank">YouTube Video</a>
+      <a href="#citation">BibTeX</a>
+    </div>
+
+    <div class="teaser">
+      <figure>
+        <img src="teaser.jpg" alt="Teaser image for FaceExpressions-70k">
+        <figcaption>
+          <em>
+            Sample frames from the FaceExpressions-70k dataset. The images are sampled from expression transition videos in the MultiFace Dataset [Wuu et al. 2022]. A large-scale human study on Amazon Mechanical Turk uses the sampled image pairs to evaluate perceptual expression differences. Intra-expression pairs from the same expression sequences have expression difference scores in the top right triangles. Inter-expression pairs, comparing across expressions, are shown in the matrix in the bottom right. Black cells with white crosses indicate excluded inter-expression pairs to manage the scale of the study.
+          </em>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="section">
+      <h2>Abstract</h2>
+      <p>
+        Facial expressions are key to human communication, conveying emotions and intentions. Given the rising popularity of digital humans and avatars, the ability to accurately represent facial expressions in real time has become an important topic. However, quantifying perceived differences between pairs of expressions is difficult, and no comprehensive subjective datasets are available for testing. This work introduces a new dataset targeting this problem: <i>FaceExpressions-70k</i>. Obtained via crowdsourcing, our dataset contains 70,500 subjective expression comparisons rated by over 1,000 study participants. We demonstrate the applicability of the dataset for training perceptual expression difference models and guiding decisions on acceptable latency and sampling rates for facial expressions when driving a face avatar.
+      </p>
+    </div>
+
+    <div class="section" id="citation">
+      <h2>Citation</h2>
+      <p>If you use our dataset in your work, please cite:</p>
+      <pre id="bibtex">
+@inproceedings{saha2025faceexpressions,
+  author    = {Saha, Avinab and Chen, Yu-Chih and Bazin, Jean-Charles and H{\"a}ne, Christian and Katsavounidis, Ioannis and Chapiro, Alexandre and Bovik, Alan C},
+  title     = {FaceExpressions-70k: A Dataset of Perceived Expression Differences},
+  year      = {2025},
+  publisher = {Association for Computing Machinery},
+  address   = {New York, NY, USA},
+  booktitle = {ACM SIGGRAPH 2025 Conference Proceedings},
+  series    = {SIGGRAPH '25}
+}
+      </pre>
+      <button class="copy-button" onclick="copyBibTeX()">Copy BibTeX</button>
+    </div>
+  </div>
+
+  <script>
+    function copyBibTeX() {
+      const text = document.getElementById('bibtex').innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert('BibTeX copied to clipboard!');
+      });
+    }
+  </script>
+</body>
+</html>
